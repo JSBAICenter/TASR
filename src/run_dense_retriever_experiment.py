@@ -1,0 +1,160 @@
+"""Run TASR experiments with Contriever dense retrieval.
+
+Same pipeline as run_instrumented_wiki.py but swaps BM25 for Contriever.
+Output parquets have identical schema so replay_wiki.py works unchanged.
+
+Prerequisites:
+  1. pip install pyserini faiss-cpu transformers
+  2. Model endpoint running (vLLM on port 8000 or 8001)
+  3. Java 11 (for Pyserini Lucene docstore)
+
+Usage:
+  # Run one model on one corpus
+  python src/run_dense_retriever_experiment.py --corpus fullwiki --model-name qwen --api-base http://localhost:8000/v1
+
+  # Run all available model×corpus cells
+  python src/run_dense_retriever_experiment.py --all
+
+  # After runs complete, replay rules and compute bootstrap CIs:
+  python src/replay_dense.py
+"""
+
+from __future__ import annotations
+
+import argparse
+import sys
+import time
+from pathlib import Path
+
+import pandas as pd
+from tqdm import tqdm
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+from agent import AgentState, ANSWER_PROMPT, format_evidence, parse_answer_confidence
+from data_loaders import LOADERS
+from eval_wrapper import exact_match_score, f1_score
+from retrieval import tokenize
+from retrieval_dense import ContrieverRetriever
+from run_instrumented_with_logprobs import MAX_ROUNDS, call_with_logprobs, jaccard
+
+
+def _score_alt(pred: str, alt_answers: list[str]) -> tuple[float, float]:
+    em = 0.0
+    f1 = 0.0
+    for g in alt_answers:
+        em = max(em, float(exact_match_score(pred, g)))
+        cur_f1, _, _ = f1_score(pred, g)
+        f1 = max(f1, float(cur_f1))
+    return em, f1
+
+
+def run(corpus: str, output_path: str, k_retrieve: int = 50, n_checkpoint: int = 25) -> pd.DataFrame:
+    items = LOADERS[corpus]()
+    retriever = ContrieverRetriever(corpus, k=k_retrieve)
+
+    out_path = Path(output_path)
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+
+    rows: list[dict] = []
+    done_qids: set[str] = set()
+    if out_path.exists():
+        try:
+            existing = pd.read_parquet(out_path)
+            done_qids = set(existing["qid"].astype(str).unique())
+            rows = existing.to_dict("records")
+            print(f"Resume: loaded {len(rows)} rows ({len(done_qids)} questions done)")
+        except Exception as e:
+            print(f"Resume failed ({e}); starting fresh")
+
+    t0 = time.time()
+    for q_idx, item in enumerate(tqdm(items, desc=f"contriever {corpus}")):
+        qid = str(item["id"])
+        if qid in done_qids:
+            continue
+        alt = item["alt_answers"]
+        qtype = item.get("type", "")
+
+        state = AgentState(question=item["question"], paragraphs=[], retriever=retriever)
+        top_score = state.ranked[0]["score"] if state.ranked else 0.0
+        rank2_score = state.ranked[1]["score"] if len(state.ranked) > 1 else 0.0
+        gap_1_2 = top_score - rank2_score
+
+        prior_tokens: set[str] = set()
+        for _ in range(MAX_ROUNDS):
+            added = state.search(n=1)
+            new_tokens: set[str] = set()
+            for p in added:
+                new_tokens.update(tokenize(p["title"] + " " + p["text"]))
+            overlap = jaccard(new_tokens, prior_tokens)
+
+            prompt = ANSWER_PROMPT.format(
+                question=state.question,
+                evidence_text=format_evidence(state.evidence),
+            )
+            text, margins = call_with_logprobs(prompt)
+            answer, conf = parse_answer_confidence(text)
+            state.round_num += 1
+            state.answers.append(answer)
+            state.confidences.append(conf)
+            em, f1 = _score_alt(answer, alt)
+
+            rows.append({
+                "qid": qid,
+                "question_type": qtype,
+                "round": state.round_num,
+                "top_bm25_score": top_score,
+                "rank2_bm25_score": rank2_score,
+                "gap_1_2": gap_1_2,
+                "jaccard_overlap": overlap,
+                "llm_confidence": conf,
+                "current_answer": answer,
+                "current_em": em,
+                "current_f1": f1,
+                "first_token_margin": margins["first_token_margin"],
+                "answer_token_margin": margins["answer_token_margin"],
+                "first_token_str": margins["first_token_str"],
+                "answer_token_str": margins["answer_token_str"],
+                "n_tokens": margins["n_tokens"],
+            })
+            prior_tokens.update(new_tokens)
+
+        if (q_idx + 1) % n_checkpoint == 0:
+            pd.DataFrame(rows).to_parquet(out_path, index=False)
+            elapsed = time.time() - t0
+            print(f"  checkpoint @ q={q_idx+1}  elapsed={elapsed/60:.1f} min  rows={len(rows)}")
+
+    df = pd.DataFrame(rows)
+    df.to_parquet(out_path, index=False)
+    return df
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--corpus", choices=list(LOADERS.keys()),
+                    help="Which corpus to run (fullwiki, nq, trivia)")
+    ap.add_argument("--out", default=None,
+                    help="Parquet output path (default: results/<model>_<corpus>_contriever/signal_log_lp.parquet)")
+    ap.add_argument("--model-name", default="qwen",
+                    help="Model label for output directory naming")
+    ap.add_argument("--k-retrieve", type=int, default=50)
+    args = ap.parse_args()
+
+    if not args.corpus:
+        print("Usage: python src/run_dense_retriever_experiment.py --corpus fullwiki [--model-name qwen]")
+        print("\nThis script runs the TASR pipeline with Contriever dense retrieval.")
+        print("Requires: pyserini, faiss-cpu, running model endpoint.")
+        sys.exit(1)
+
+    out = args.out or f"results/{args.model_name}_{args.corpus}_contriever/signal_log_lp.parquet"
+    print(f"=== retriever=contriever  corpus={args.corpus}  model={args.model_name}  out={out} ===")
+    t0 = time.time()
+    df = run(args.corpus, out, k_retrieve=args.k_retrieve)
+    elapsed = time.time() - t0
+    print(f"\nWrote {out}: {len(df)} rows in {elapsed/60:.1f} min")
+    for c in ["first_token_margin", "answer_token_margin"]:
+        print(f"  {c}: NaN {df[c].isna().sum()}/{len(df)}")
+
+
+if __name__ == "__main__":
+    main()

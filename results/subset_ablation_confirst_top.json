@@ -1,0 +1,230 @@
+{
+  "label": "confirst",
+  "signals": [
+    "answer_stable",
+    "answer_in_evidence",
+    "calibrated_conf",
+    "overlap_signal",
+    "top_score_z_intra",
+    "gap"
+  ],
+  "locked_thresholds": {
+    "answer_stable": {
+      "threshold": 1.0,
+      "tune_f1": 59.66385281385281,
+      "tune_calls": 2.62
+    },
+    "answer_in_evidence": {
+      "threshold": 1.0,
+      "tune_f1": 65.39718614718615,
+      "tune_calls": 2.38
+    },
+    "calibrated_conf": {
+      "threshold": 0.5517801455301454,
+      "tune_f1": 66.66385281385283,
+      "tune_calls": 2.67
+    },
+    "overlap_signal": {
+      "threshold": 0.12259615384615385,
+      "tune_f1": 62.26385281385281,
+      "tune_calls": 2.96
+    },
+    "top_score_z_intra": {
+      "threshold": 2.1176373756661606,
+      "tune_f1": 53.74718614718614,
+      "tune_calls": 2.84
+    },
+    "gap": {
+      "threshold": 0.9814065418753312,
+      "tune_f1": 51.49718614718615,
+      "tune_calls": 2.72
+    }
+  },
+  "fixed_k3_eval": {
+    "f1": 58.36852684352684,
+    "calls": 3.0
+  },
+  "top_k_bootstrap": {
+    "answer_stable+calibrated_conf+overlap_signal": {
+      "ours_f1": 55.45106652606652,
+      "ours_calls": 2.0966666666666667,
+      "diff_f1": -2.9174603174603178,
+      "diff_f1_ci95": [
+        -5.676071428571428,
+        -0.4706349206349228
+      ]
+    },
+    "answer_stable+answer_in_evidence+calibrated_conf": {
+      "ours_f1": 54.93122525622526,
+      "ours_calls": 1.7633333333333334,
+      "diff_f1": -3.4373015873015875,
+      "diff_f1_ci95": [
+        -7.069325396825396,
+        0.08748015873015841
+      ]
+    },
+    "answer_stable+top_score_z_intra": {
+      "ours_f1": 50.90618178118178,
+      "ours_calls": 1.6433333333333333,
+      "diff_f1": -7.462345062345063,
+      "diff_f1_ci95": [
+        -11.945480167980168,
+        -2.6327761590261596
+      ]
+    },
+    "answer_in_evidence": {
+      "ours_f1": 60.14313001813002,
+      "ours_calls": 2.6766666666666667,
+      "diff_f1": 1.7746031746031745,
+      "diff_f1_ci95": [
+        -2.2265873015873017,
+        5.745198412698412
+      ]
+    },
+    "answer_in_evidence+calibrated_conf+overlap_signal": {
+      "ours_f1": 56.736780811780804,
+      "ours_calls": 1.93,
+      "diff_f1": -1.6317460317460317,
+      "diff_f1_ci95": [
+        -4.829861111111111,
+        1.4367857142857139
+      ]
+    },
+    "overlap_signal+top_score_z_intra": {
+      "ours_f1": 50.32284844784844,
+      "ours_calls": 1.8033333333333332,
+      "diff_f1": -8.045678395678395,
+      "diff_f1_ci95": [
+        -12.312550088800089,
+        -3.354985754985757
+      ]
+    },
+    "calibrated_conf+overlap_signal": {
+      "ours_f1": 58.36773319273318,
+      "ours_calls": 2.4033333333333333,
+      "diff_f1": -0.0007936507936507909,
+      "diff_f1_ci95": [
+        -2.422678571428571,
+        2.335277777777776
+      ]
+    },
+    "answer_in_evidence+overlap_signal": {
+      "ours_f1": 56.56535224035224,
+      "ours_calls": 2.026666666666667,
+      "diff_f1": -1.8031746031746034,
+      "diff_f1_ci95": [
+        -5.186626984126984,
+        1.4493253968253959
+      ]
+    },
+    "answer_stable": {
+      "ours_f1": 58.106622081622085,
+      "ours_calls": 2.513333333333333,
+      "diff_f1": -0.26190476190476203,
+      "diff_f1_ci95": [
+        -2.5956349206349207,
+        1.9057539682539675
+      ]
+    },
+    "answer_in_evidence+calibrated_conf": {
+      "ours_f1": 60.31455858955859,
+      "ours_calls": 2.3666666666666667,
+      "diff_f1": 1.946031746031746,
+      "diff_f1_ci95": [
+        -1.8573809523809524,
+        5.69706349206349
+      ]
+    },
+    "calibrated_conf": {
+      "ours_f1": 64.21217763717763,
+      "ours_calls": 2.9466666666666668,
+      "diff_f1": 5.843650793650794,
+      "diff_f1_ci95": [
+        2.963888888888889,
+        8.855039682539683
+      ]
+    },
+    "answer_stable+answer_in_evidence+calibrated_conf+overlap_signal": {
+      "ours_f1": 53.931225256225254,
+      "ours_calls": 1.6866666666666668,
+      "diff_f1": -4.4373015873015875,
+      "diff_f1_ci95": [
+        -8.006924603174603,
+        -1.0198412698412702
+      ]
+    },
+    "answer_stable+calibrated_conf+top_score_z_intra": {
+      "ours_f1": 50.183959558959565,
+      "ours_calls": 1.48,
+      "diff_f1": -8.184567284567285,
+      "diff_f1_ci95": [
+        -12.614271885521886,
+        -3.4197993672993676
+      ]
+    },
+    "calibrated_conf+top_score_z_intra": {
+      "ours_f1": 52.233959558959555,
+      "ours_calls": 1.8066666666666666,
+      "diff_f1": -6.134567284567285,
+      "diff_f1_ci95": [
+        -10.864257455507456,
+        -1.280843739593741
+      ]
+    },
+    "answer_stable+answer_in_evidence": {
+      "ours_f1": 54.93122525622526,
+      "ours_calls": 1.8133333333333332,
+      "diff_f1": -3.4373015873015875,
+      "diff_f1_ci95": [
+        -7.069325396825396,
+        0.08748015873015841
+      ]
+    },
+    "overlap_signal": {
+      "ours_f1": 58.68043160543161,
+      "ours_calls": 3.1066666666666665,
+      "diff_f1": 0.31190476190476196,
+      "diff_f1_ci95": [
+        -1.7483333333333333,
+        2.4244047619047615
+      ]
+    },
+    "answer_stable+overlap_signal": {
+      "ours_f1": 56.173288748288755,
+      "ours_calls": 2.24,
+      "diff_f1": -2.1952380952380954,
+      "diff_f1_ci95": [
+        -4.784801587301587,
+        0.11111111111111101
+      ]
+    },
+    "top_score_z_intra": {
+      "ours_f1": 52.12284844784845,
+      "ours_calls": 2.5733333333333333,
+      "diff_f1": -6.2456783956783966,
+      "diff_f1_ci95": [
+        -10.711887695637696,
+        -1.456537999037999
+      ]
+    },
+    "answer_stable+calibrated_conf": {
+      "ours_f1": 57.384399859399856,
+      "ours_calls": 2.2066666666666666,
+      "diff_f1": -0.9841269841269842,
+      "diff_f1_ci95": [
+        -3.5956349206349207,
+        1.4603174603174602
+      ]
+    },
+    "answer_stable+answer_in_evidence+overlap_signal": {
+      "ours_f1": 53.931225256225254,
+      "ours_calls": 1.6966666666666668,
+      "diff_f1": -4.4373015873015875,
+      "diff_f1_ci95": [
+        -8.006924603174603,
+        -1.0198412698412702
+      ]
+    }
+  },
+  "n_subsets": 63
+}

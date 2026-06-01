@@ -1,0 +1,15 @@
+datasets
+faiss-cpu
+ir-datasets
+matplotlib
+numpy
+openai
+pandas
+pyarrow
+pyserini
+python-dotenv
+rank-bm25
+scikit-learn
+sentence-transformers
+tqdm
+ujson

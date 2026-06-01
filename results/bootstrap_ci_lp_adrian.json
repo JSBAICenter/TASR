@@ -1,0 +1,186 @@
+{
+  "data_source": "results/philip/signal_log_lp_enriched.parquet (Philip's logprobs re-run; same trace used for Family A/B in bootstrap_ci_lp.json)",
+  "rule": "stop if answer_stable == 1",
+  "n_questions": 300,
+  "n_boot": 1000,
+  "seed": 42,
+  "ours_em_mean": 56.667,
+  "ours_f1_mean": 68.039,
+  "ours_avg_calls": 2.537,
+  "comparisons": {
+    "fixed_k=1": {
+      "ours_f1_mean": 68.039,
+      "ours_f1_ci95": [
+        63.418,
+        73.025
+      ],
+      "base_f1_mean": 49.19,
+      "base_f1_ci95": [
+        44.204,
+        54.438
+      ],
+      "diff_f1_mean": 18.849,
+      "diff_f1_ci95": [
+        14.787,
+        22.998
+      ],
+      "diff_em_mean": 16.0,
+      "diff_em_ci95": [
+        12.0,
+        20.333
+      ],
+      "diff_calls_mean": 1.537,
+      "diff_calls_ci95": [
+        1.453,
+        1.623
+      ],
+      "p_ours_worse_f1": 0.0,
+      "p_ours_better_f1": 1.0
+    },
+    "fixed_k=2": {
+      "ours_f1_mean": 68.039,
+      "ours_f1_ci95": [
+        63.418,
+        73.025
+      ],
+      "base_f1_mean": 63.281,
+      "base_f1_ci95": [
+        58.661,
+        68.461
+      ],
+      "diff_f1_mean": 4.757,
+      "diff_f1_ci95": [
+        2.411,
+        7.091
+      ],
+      "diff_em_mean": 3.667,
+      "diff_em_ci95": [
+        1.333,
+        6.0
+      ],
+      "diff_calls_mean": 0.537,
+      "diff_calls_ci95": [
+        0.453,
+        0.623
+      ],
+      "p_ours_worse_f1": 0.0,
+      "p_ours_better_f1": 1.0
+    },
+    "fixed_k=3": {
+      "ours_f1_mean": 68.039,
+      "ours_f1_ci95": [
+        63.418,
+        73.025
+      ],
+      "base_f1_mean": 65.188,
+      "base_f1_ci95": [
+        60.341,
+        70.041
+      ],
+      "diff_f1_mean": 2.851,
+      "diff_f1_ci95": [
+        1.123,
+        4.856
+      ],
+      "diff_em_mean": 2.0,
+      "diff_em_ci95": [
+        0.333,
+        4.0
+      ],
+      "diff_calls_mean": -0.463,
+      "diff_calls_ci95": [
+        -0.547,
+        -0.377
+      ],
+      "p_ours_worse_f1": 0.0,
+      "p_ours_better_f1": 1.0
+    },
+    "fixed_k=5": {
+      "ours_f1_mean": 68.039,
+      "ours_f1_ci95": [
+        63.418,
+        73.025
+      ],
+      "base_f1_mean": 69.025,
+      "base_f1_ci95": [
+        64.662,
+        73.852
+      ],
+      "diff_f1_mean": -0.986,
+      "diff_f1_ci95": [
+        -2.957,
+        0.962
+      ],
+      "diff_em_mean": -1.0,
+      "diff_em_ci95": [
+        -3.333,
+        1.333
+      ],
+      "diff_calls_mean": -2.463,
+      "diff_calls_ci95": [
+        -2.547,
+        -2.377
+      ],
+      "p_ours_worse_f1": 0.848,
+      "p_ours_better_f1": 0.152
+    },
+    "family_A": {
+      "ours_f1_mean": 68.039,
+      "ours_f1_ci95": [
+        63.418,
+        73.025
+      ],
+      "base_f1_mean": 66.809,
+      "base_f1_ci95": [
+        62.173,
+        71.493
+      ],
+      "diff_f1_mean": 1.23,
+      "diff_f1_ci95": [
+        -0.891,
+        3.324
+      ],
+      "diff_em_mean": 0.333,
+      "diff_em_ci95": [
+        -1.667,
+        2.333
+      ],
+      "diff_calls_mean": -0.483,
+      "diff_calls_ci95": [
+        -0.67,
+        -0.317
+      ],
+      "p_ours_worse_f1": 0.121,
+      "p_ours_better_f1": 0.879
+    },
+    "family_B": {
+      "ours_f1_mean": 68.039,
+      "ours_f1_ci95": [
+        63.418,
+        73.025
+      ],
+      "base_f1_mean": 65.527,
+      "base_f1_ci95": [
+        60.892,
+        70.31
+      ],
+      "diff_f1_mean": 2.512,
+      "diff_f1_ci95": [
+        0.776,
+        4.474
+      ],
+      "diff_em_mean": 2.0,
+      "diff_em_ci95": [
+        0.333,
+        4.0
+      ],
+      "diff_calls_mean": -0.097,
+      "diff_calls_ci95": [
+        -0.243,
+        0.023
+      ],
+      "p_ours_worse_f1": 0.0,
+      "p_ours_better_f1": 1.0
+    }
+  }
+}

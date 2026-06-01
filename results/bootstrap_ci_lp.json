@@ -1,0 +1,128 @@
+{
+  "family": "A",
+  "rule": "stop if calibrated_logit_margin > 0.7250 OR overlap_signal > 0.1500",
+  "n_questions": 300,
+  "n_boot": 1000,
+  "seed": 42,
+  "ours_em_mean": 56.333,
+  "ours_f1_mean": 66.809,
+  "ours_avg_calls": 3.02,
+  "comparisons": {
+    "fixed_k=1": {
+      "ours_f1_mean": 66.809,
+      "ours_f1_ci95": [
+        62.173,
+        71.493
+      ],
+      "base_f1_mean": 49.19,
+      "base_f1_ci95": [
+        44.204,
+        54.438
+      ],
+      "diff_f1_mean": 17.619,
+      "diff_f1_ci95": [
+        13.345,
+        21.651
+      ],
+      "diff_em_mean": 15.667,
+      "diff_em_ci95": [
+        11.667,
+        20.0
+      ],
+      "diff_calls_mean": 2.02,
+      "diff_calls_ci95": [
+        1.86,
+        2.193
+      ],
+      "p_ours_worse_f1": 0.0,
+      "p_ours_better_f1": 1.0
+    },
+    "fixed_k=2": {
+      "ours_f1_mean": 66.809,
+      "ours_f1_ci95": [
+        62.173,
+        71.493
+      ],
+      "base_f1_mean": 63.281,
+      "base_f1_ci95": [
+        58.661,
+        68.461
+      ],
+      "diff_f1_mean": 3.527,
+      "diff_f1_ci95": [
+        1.065,
+        6.177
+      ],
+      "diff_em_mean": 3.333,
+      "diff_em_ci95": [
+        1.0,
+        6.0
+      ],
+      "diff_calls_mean": 1.02,
+      "diff_calls_ci95": [
+        0.86,
+        1.193
+      ],
+      "p_ours_worse_f1": 0.002,
+      "p_ours_better_f1": 0.998
+    },
+    "fixed_k=3": {
+      "ours_f1_mean": 66.809,
+      "ours_f1_ci95": [
+        62.173,
+        71.493
+      ],
+      "base_f1_mean": 65.188,
+      "base_f1_ci95": [
+        60.341,
+        70.041
+      ],
+      "diff_f1_mean": 1.621,
+      "diff_f1_ci95": [
+        -0.603,
+        3.877
+      ],
+      "diff_em_mean": 1.667,
+      "diff_em_ci95": [
+        -0.667,
+        4.0
+      ],
+      "diff_calls_mean": 0.02,
+      "diff_calls_ci95": [
+        -0.14,
+        0.193
+      ],
+      "p_ours_worse_f1": 0.075,
+      "p_ours_better_f1": 0.925
+    },
+    "fixed_k=5": {
+      "ours_f1_mean": 66.809,
+      "ours_f1_ci95": [
+        62.173,
+        71.493
+      ],
+      "base_f1_mean": 69.025,
+      "base_f1_ci95": [
+        64.662,
+        73.852
+      ],
+      "diff_f1_mean": -2.216,
+      "diff_f1_ci95": [
+        -4.214,
+        -0.444
+      ],
+      "diff_em_mean": -1.333,
+      "diff_em_ci95": [
+        -3.667,
+        0.667
+      ],
+      "diff_calls_mean": -1.98,
+      "diff_calls_ci95": [
+        -2.14,
+        -1.807
+      ],
+      "p_ours_worse_f1": 0.993,
+      "p_ours_better_f1": 0.007
+    }
+  }
+}

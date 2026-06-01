@@ -1,0 +1,61 @@
+{
+  "signals": [
+    "calibrated_logit_margin",
+    "answer_stable",
+    "calibrated_conf",
+    "overlap_signal",
+    "top_score_z_intra",
+    "gap"
+  ],
+  "budget_max_avg_calls": 3.0,
+  "baselines": {
+    "fixed_k3": {
+      "f1": 65.18777796277796,
+      "calls": 3.0
+    },
+    "answer_stable": {
+      "f1": 68.0385716135716,
+      "calls": 2.5366666666666666,
+      "triggered": 297
+    },
+    "family_a": {
+      "f1": 66.80871813371813,
+      "calls": 3.02,
+      "rule": "margin>0.725 OR overlap>0.15"
+    }
+  },
+  "locked_thresholds": {
+    "calibrated_logit_margin": {
+      "threshold": 0.4358974358974359,
+      "tune_f1": 71.9716959511077,
+      "tune_calls": 2.45
+    },
+    "answer_stable": {
+      "threshold": 1.0,
+      "tune_f1": 72.45979118920295,
+      "tune_calls": 2.42
+    },
+    "calibrated_conf": {
+      "threshold": 0.4475524475524476,
+      "tune_f1": 67.51861471861471,
+      "tune_calls": 2.02
+    },
+    "overlap_signal": {
+      "threshold": 0.12259615384615385,
+      "tune_f1": 72.45979118920295,
+      "tune_calls": 2.96
+    },
+    "top_score_z_intra": {
+      "threshold": 2.1176373756661606,
+      "tune_f1": 64.68836261777439,
+      "tune_calls": 2.84
+    },
+    "gap": {
+      "threshold": 0.9814065418753312,
+      "tune_f1": 63.93836261777439,
+      "tune_calls": 2.72
+    }
+  },
+  "n_subsets": 63,
+  "n_significant_wins_vs_answer_stable": 6
+}

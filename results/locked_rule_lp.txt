@@ -1,0 +1,21 @@
+{
+  "family": "A",
+  "rule": "stop if calibrated_logit_margin > 0.7250 OR overlap_signal > 0.1500",
+  "t_margin": 0.725,
+  "t_overlap": 0.15,
+  "tune": {
+    "em": 63.0,
+    "f1": 75.45979118920295,
+    "avg_calls": 2.84,
+    "n_stopped_early": 83,
+    "n_questions": 100
+  },
+  "eval": {
+    "em": 56.333333333333336,
+    "f1": 66.80871813371813,
+    "avg_calls": 3.02,
+    "n_questions": 300,
+    "n_stopped_early": 234
+  },
+  "budget_max_avg_calls": 3.0
+}

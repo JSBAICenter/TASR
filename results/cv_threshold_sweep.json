@@ -1,0 +1,476 @@
+{
+  "qwen_hp": {
+    "folds": [
+      {
+        "fold": 0,
+        "best_t_m": 0.725,
+        "best_t_o": 0.15,
+        "train_f1": 76.55390565317036,
+        "train_calls": 2.8625,
+        "held_fold_f1": 71.08333333333333,
+        "held_fold_calls": 2.75,
+        "eval_set_f1": 66.80871813371813,
+        "eval_set_calls": 3.02
+      },
+      {
+        "fold": 1,
+        "best_t_m": 0.675,
+        "best_t_o": 0.15,
+        "train_f1": 77.26731601731602,
+        "train_calls": 2.6625,
+        "held_fold_f1": 63.22969187675069,
+        "held_fold_calls": 3.15,
+        "eval_set_f1": 66.64205146705146,
+        "eval_set_calls": 2.92
+      },
+      {
+        "fold": 2,
+        "best_t_m": 0.725,
+        "best_t_o": 0.15,
+        "train_f1": 70.93837535014005,
+        "train_calls": 2.875,
+        "held_fold_f1": 93.54545454545456,
+        "held_fold_calls": 2.7,
+        "eval_set_f1": 66.80871813371813,
+        "eval_set_calls": 3.02
+      },
+      {
+        "fold": 3,
+        "best_t_m": 0.725,
+        "best_t_o": 0.225,
+        "train_f1": 75.80390565317036,
+        "train_calls": 3.45,
+        "held_fold_f1": 70.75,
+        "held_fold_calls": 3.4,
+        "eval_set_f1": 68.91348003848003,
+        "eval_set_calls": 3.6266666666666665
+      },
+      {
+        "fold": 4,
+        "best_t_m": 0.725,
+        "best_t_o": 0.15,
+        "train_f1": 77.15211993888464,
+        "train_calls": 2.825,
+        "held_fold_f1": 68.69047619047619,
+        "held_fold_calls": 2.9,
+        "eval_set_f1": 66.80871813371813,
+        "eval_set_calls": 3.02
+      }
+    ],
+    "cv_train_f1_mean": 75.54312452253629,
+    "cv_held_f1_mean": 73.45979118920296,
+    "cv_eval_f1_mean": 67.19633718133717,
+    "overfit_gap_train_minus_held": 2.0833333333333286,
+    "overfit_gap_train_minus_eval": 8.346787341199118,
+    "full_tune_best": {
+      "t_m": 0.725,
+      "t_o": 0.15,
+      "tune_f1": 75.45979118920295,
+      "eval_f1": 66.80871813371813,
+      "eval_calls": 3.02
+    },
+    "locked": {
+      "t_m": 0.725,
+      "t_o": 0.15,
+      "eval_f1": 66.80871813371813,
+      "eval_calls": 3.02
+    },
+    "delta_tuned_minus_locked_f1": 0.0,
+    "delta_tuned_minus_locked_calls": 0.0
+  },
+  "qwen_2w": {
+    "folds": [
+      {
+        "fold": 0,
+        "best_t_m": 0.525,
+        "best_t_o": 0.2,
+        "train_f1": 55.76388888888889,
+        "train_calls": 3.4,
+        "held_fold_f1": 65.0,
+        "held_fold_calls": 3.55,
+        "eval_set_f1": 55.56809856809857,
+        "eval_set_calls": 3.4266666666666667
+      },
+      {
+        "fold": 1,
+        "best_t_m": 0.525,
+        "best_t_o": 0.2,
+        "train_f1": 59.097222222222214,
+        "train_calls": 3.4625,
+        "held_fold_f1": 51.66666666666667,
+        "held_fold_calls": 3.3,
+        "eval_set_f1": 55.56809856809857,
+        "eval_set_calls": 3.4266666666666667
+      },
+      {
+        "fold": 2,
+        "best_t_m": 0.525,
+        "best_t_o": 0.2,
+        "train_f1": 55.90277777777777,
+        "train_calls": 3.4125,
+        "held_fold_f1": 64.44444444444444,
+        "held_fold_calls": 3.5,
+        "eval_set_f1": 55.56809856809857,
+        "eval_set_calls": 3.4266666666666667
+      },
+      {
+        "fold": 3,
+        "best_t_m": 0.525,
+        "best_t_o": 0.2,
+        "train_f1": 58.88888888888888,
+        "train_calls": 3.3375,
+        "held_fold_f1": 52.5,
+        "held_fold_calls": 3.8,
+        "eval_set_f1": 55.56809856809857,
+        "eval_set_calls": 3.4266666666666667
+      },
+      {
+        "fold": 4,
+        "best_t_m": 0.525,
+        "best_t_o": 0.15,
+        "train_f1": 57.152777777777764,
+        "train_calls": 3.3875,
+        "held_fold_f1": 51.11111111111111,
+        "held_fold_calls": 2.85,
+        "eval_set_f1": 55.33317793317794,
+        "eval_set_calls": 3.16
+      }
+    ],
+    "cv_train_f1_mean": 57.36111111111111,
+    "cv_held_f1_mean": 56.94444444444444,
+    "cv_eval_f1_mean": 55.52111444111445,
+    "overfit_gap_train_minus_held": 0.4166666666666643,
+    "overfit_gap_train_minus_eval": 1.8399966699966583,
+    "full_tune_best": {
+      "t_m": 0.525,
+      "t_o": 0.2,
+      "tune_f1": 57.6111111111111,
+      "eval_f1": 55.56809856809857,
+      "eval_calls": 3.4266666666666667
+    },
+    "locked": {
+      "t_m": 0.725,
+      "t_o": 0.15,
+      "eval_f1": 57.55540015540016,
+      "eval_calls": 3.5866666666666664
+    },
+    "delta_tuned_minus_locked_f1": -1.9873015873015873,
+    "delta_tuned_minus_locked_calls": -0.1599999999999997
+  },
+  "devstral_hp": {
+    "folds": [
+      {
+        "fold": 0,
+        "best_t_m": 0.7,
+        "best_t_o": 0.15,
+        "train_f1": 65.52811200237672,
+        "train_calls": 3.1375,
+        "held_fold_f1": 79.25000000000001,
+        "held_fold_calls": 2.7,
+        "eval_set_f1": 59.30618363118363,
+        "eval_set_calls": 3.2733333333333334
+      },
+      {
+        "fold": 1,
+        "best_t_m": 0.675,
+        "best_t_o": 0.25,
+        "train_f1": 73.73644533571004,
+        "train_calls": 3.3625,
+        "held_fold_f1": 45.41666666666667,
+        "held_fold_calls": 4.15,
+        "eval_set_f1": 60.59568302068302,
+        "eval_set_calls": 3.65
+      },
+      {
+        "fold": 2,
+        "best_t_m": 0.65,
+        "best_t_o": 0.25,
+        "train_f1": 68.33465962142434,
+        "train_calls": 3.3875,
+        "held_fold_f1": 62.023809523809526,
+        "held_fold_calls": 3.9,
+        "eval_set_f1": 60.26234968734968,
+        "eval_set_calls": 3.6033333333333335
+      },
+      {
+        "fold": 3,
+        "best_t_m": 0.7,
+        "best_t_o": 0.15,
+        "train_f1": 67.16414141414141,
+        "train_calls": 3.1,
+        "held_fold_f1": 72.70588235294117,
+        "held_fold_calls": 2.85,
+        "eval_set_f1": 59.30618363118363,
+        "eval_set_calls": 3.2733333333333334
+      },
+      {
+        "fold": 4,
+        "best_t_m": 0.7,
+        "best_t_o": 0.15,
+        "train_f1": 68.59908963585436,
+        "train_calls": 3.0875,
+        "held_fold_f1": 66.96608946608946,
+        "held_fold_calls": 2.9,
+        "eval_set_f1": 59.30618363118363,
+        "eval_set_calls": 3.2733333333333334
+      }
+    ],
+    "cv_train_f1_mean": 68.67248960190138,
+    "cv_held_f1_mean": 65.27248960190136,
+    "cv_eval_f1_mean": 59.75531672031671,
+    "overfit_gap_train_minus_held": 3.40000000000002,
+    "overfit_gap_train_minus_eval": 8.917172881584662,
+    "full_tune_best": {
+      "t_m": 0.7,
+      "t_o": 0.15,
+      "tune_f1": 68.27248960190137,
+      "eval_f1": 59.30618363118363,
+      "eval_calls": 3.2733333333333334
+    },
+    "locked": {
+      "t_m": 0.725,
+      "t_o": 0.15,
+      "eval_f1": 59.27285029785029,
+      "eval_calls": 3.3233333333333333
+    },
+    "delta_tuned_minus_locked_f1": 0.033333333333338544,
+    "delta_tuned_minus_locked_calls": -0.04999999999999982
+  },
+  "devstral_2w": {
+    "folds": [
+      {
+        "fold": 0,
+        "best_t_m": 0.4,
+        "best_t_o": 0.125,
+        "train_f1": 55.00000000000001,
+        "train_calls": 2.8,
+        "held_fold_f1": 60.0,
+        "held_fold_calls": 3.2,
+        "eval_set_f1": 48.135005735005734,
+        "eval_set_calls": 2.5833333333333335
+      },
+      {
+        "fold": 1,
+        "best_t_m": 0.4,
+        "best_t_o": 0.125,
+        "train_f1": 65.0,
+        "train_calls": 2.85,
+        "held_fold_f1": 20.0,
+        "held_fold_calls": 3.0,
+        "eval_set_f1": 48.135005735005734,
+        "eval_set_calls": 2.5833333333333335
+      },
+      {
+        "fold": 2,
+        "best_t_m": 0.4,
+        "best_t_o": 0.125,
+        "train_f1": 45.0,
+        "train_calls": 2.85,
+        "held_fold_f1": 100.0,
+        "held_fold_calls": 3.0,
+        "eval_set_f1": 48.135005735005734,
+        "eval_set_calls": 2.5833333333333335
+      },
+      {
+        "fold": 3,
+        "best_t_m": 0.4,
+        "best_t_o": 0.125,
+        "train_f1": 55.00000000000001,
+        "train_calls": 2.95,
+        "held_fold_f1": 60.0,
+        "held_fold_calls": 2.6,
+        "eval_set_f1": 48.135005735005734,
+        "eval_set_calls": 2.5833333333333335
+      },
+      {
+        "fold": 4,
+        "best_t_m": 0.4,
+        "best_t_o": 0.125,
+        "train_f1": 60.0,
+        "train_calls": 2.95,
+        "held_fold_f1": 40.0,
+        "held_fold_calls": 2.6,
+        "eval_set_f1": 48.135005735005734,
+        "eval_set_calls": 2.5833333333333335
+      }
+    ],
+    "cv_train_f1_mean": 56.0,
+    "cv_held_f1_mean": 56.0,
+    "cv_eval_f1_mean": 48.135005735005734,
+    "overfit_gap_train_minus_held": 0.0,
+    "overfit_gap_train_minus_eval": 7.864994264994266,
+    "full_tune_best": {
+      "t_m": 0.4,
+      "t_o": 0.125,
+      "tune_f1": 56.00000000000001,
+      "eval_f1": 48.135005735005734,
+      "eval_calls": 2.5833333333333335
+    },
+    "locked": {
+      "t_m": 0.725,
+      "t_o": 0.15,
+      "eval_f1": 50.762230362230355,
+      "eval_calls": 3.723333333333333
+    },
+    "delta_tuned_minus_locked_f1": -2.6272246272246207,
+    "delta_tuned_minus_locked_calls": -1.1399999999999997
+  },
+  "gemma_hp": {
+    "folds": [
+      {
+        "fold": 0,
+        "best_t_m": 0.725,
+        "best_t_o": 0.175,
+        "train_f1": 72.20063025210084,
+        "train_calls": 3.4875,
+        "held_fold_f1": 55.08333333333333,
+        "held_fold_calls": 3.25,
+        "eval_set_f1": 60.306138768638775,
+        "eval_set_calls": 3.59
+      },
+      {
+        "fold": 1,
+        "best_t_m": 0.675,
+        "best_t_o": 0.4,
+        "train_f1": 69.17261904761904,
+        "train_calls": 3.2,
+        "held_fold_f1": 68.33823529411764,
+        "held_fold_calls": 2.8,
+        "eval_set_f1": 61.804551467051475,
+        "eval_set_calls": 3.3066666666666666
+      },
+      {
+        "fold": 2,
+        "best_t_m": 0.675,
+        "best_t_o": 0.4,
+        "train_f1": 68.75717787114846,
+        "train_calls": 3.1375,
+        "held_fold_f1": 70.0,
+        "held_fold_calls": 3.05,
+        "eval_set_f1": 61.804551467051475,
+        "eval_set_calls": 3.3066666666666666
+      },
+      {
+        "fold": 3,
+        "best_t_m": 0.4,
+        "best_t_o": 0.4,
+        "train_f1": 70.7780112044818,
+        "train_calls": 2.6875,
+        "held_fold_f1": 56.107142857142854,
+        "held_fold_calls": 2.25,
+        "eval_set_f1": 61.06898148148148,
+        "eval_set_calls": 2.7466666666666666
+      },
+      {
+        "fold": 4,
+        "best_t_m": 0.675,
+        "best_t_o": 0.4,
+        "train_f1": 67.38217787114846,
+        "train_calls": 3.1125,
+        "held_fold_f1": 75.50000000000001,
+        "held_fold_calls": 3.15,
+        "eval_set_f1": 61.804551467051475,
+        "eval_set_calls": 3.3066666666666666
+      }
+    ],
+    "cv_train_f1_mean": 69.6581232492997,
+    "cv_held_f1_mean": 65.00574229691877,
+    "cv_eval_f1_mean": 61.35775493025493,
+    "overfit_gap_train_minus_held": 4.652380952380938,
+    "overfit_gap_train_minus_eval": 8.300368319044779,
+    "full_tune_best": {
+      "t_m": 0.675,
+      "t_o": 0.4,
+      "tune_f1": 69.00574229691877,
+      "eval_f1": 61.804551467051475,
+      "eval_calls": 3.3066666666666666
+    },
+    "locked": {
+      "t_m": 0.725,
+      "t_o": 0.15,
+      "eval_f1": 59.361694324194325,
+      "eval_calls": 3.283333333333333
+    },
+    "delta_tuned_minus_locked_f1": 2.44285714285715,
+    "delta_tuned_minus_locked_calls": 0.023333333333333428
+  },
+  "gemma_2w": {
+    "folds": [
+      {
+        "fold": 0,
+        "best_t_m": 0.725,
+        "best_t_o": 0.175,
+        "train_f1": 58.4375,
+        "train_calls": 3.3875,
+        "held_fold_f1": 29.999999999999993,
+        "held_fold_calls": 4.05,
+        "eval_set_f1": 49.7530118030118,
+        "eval_set_calls": 3.5766666666666667
+      },
+      {
+        "fold": 1,
+        "best_t_m": 0.625,
+        "best_t_o": 0.15,
+        "train_f1": 49.375,
+        "train_calls": 3.3,
+        "held_fold_f1": 56.25,
+        "held_fold_calls": 2.85,
+        "eval_set_f1": 47.58634513634514,
+        "eval_set_calls": 3.243333333333333
+      },
+      {
+        "fold": 2,
+        "best_t_m": 0.5,
+        "best_t_o": 0.175,
+        "train_f1": 54.0625,
+        "train_calls": 3.2625,
+        "held_fold_f1": 37.5,
+        "held_fold_calls": 3.4,
+        "eval_set_f1": 49.03078958078958,
+        "eval_set_calls": 3.3833333333333333
+      },
+      {
+        "fold": 3,
+        "best_t_m": 0.625,
+        "best_t_o": 0.175,
+        "train_f1": 47.1875,
+        "train_calls": 3.4375,
+        "held_fold_f1": 70.0,
+        "held_fold_calls": 2.8,
+        "eval_set_f1": 49.03078958078958,
+        "eval_set_calls": 3.4066666666666667
+      },
+      {
+        "fold": 4,
+        "best_t_m": 0.625,
+        "best_t_o": 0.175,
+        "train_f1": 50.9375,
+        "train_calls": 3.3125,
+        "held_fold_f1": 55.00000000000001,
+        "held_fold_calls": 3.3,
+        "eval_set_f1": 49.03078958078958,
+        "eval_set_calls": 3.4066666666666667
+      }
+    ],
+    "cv_train_f1_mean": 52.0,
+    "cv_held_f1_mean": 49.75,
+    "cv_eval_f1_mean": 48.88634513634514,
+    "overfit_gap_train_minus_held": 2.25,
+    "overfit_gap_train_minus_eval": 3.113654863654858,
+    "full_tune_best": {
+      "t_m": 0.625,
+      "t_o": 0.175,
+      "tune_f1": 51.74999999999999,
+      "eval_f1": 49.03078958078958,
+      "eval_calls": 3.4066666666666667
+    },
+    "locked": {
+      "t_m": 0.725,
+      "t_o": 0.15,
+      "eval_f1": 47.97523402523402,
+      "eval_calls": 3.39
+    },
+    "delta_tuned_minus_locked_f1": 1.0555555555555571,
+    "delta_tuned_minus_locked_calls": 0.016666666666666607
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "signals": [
+    "calibrated_logit_margin",
+    "answer_stable",
+    "calibrated_conf",
+    "overlap_signal",
+    "top_score_z_intra",
+    "gap"
+  ],
+  "budget_max_avg_calls": 3.0,
+  "locked_thresholds": {
+    "calibrated_logit_margin": {
+      "threshold": 0.5128205128205128,
+      "tune_f1": 65.07248960190137,
+      "tune_calls": 2.89
+    },
+    "answer_stable": {
+      "threshold": 1.0,
+      "tune_f1": 67.07248960190137,
+      "tune_calls": 2.5
+    },
+    "calibrated_conf": {
+      "threshold": 0.4424567680381634,
+      "tune_f1": 64.4058229352347,
+      "tune_calls": 2.37
+    },
+    "overlap_signal": {
+      "threshold": 0.10897435897435898,
+      "tune_f1": 67.07248960190137,
+      "tune_calls": 2.62
+    },
+    "top_score_z_intra": {
+      "threshold": 2.15931462127031,
+      "tune_f1": 58.23915626856804,
+      "tune_calls": 3.0
+    },
+    "gap": {
+      "threshold": 0.9814065418753312,
+      "tune_f1": 56.38201341142518,
+      "tune_calls": 2.72
+    }
+  },
+  "baselines": {
+    "fixed_k3_f1": 58.65392477892478,
+    "answer_stable_f1": 56.76332648832649,
+    "answer_stable_calls": 2.513333333333333,
+    "family_a_f1": 59.27285029785029
+  },
+  "n_formulas": 876,
+  "n_winners_vs_answer_stable": 66,
+  "n_winners_no_answer_stable": 21,
+  "n_winners_with_margin": 51,
+  "top_10_by_f1": [
+    {
+      "size": 4,
+      "n_groups": 1,
+      "formula": "as&cnf&mrg&ovl",
+      "eval_f1": 62.53951696451696,
+      "eval_calls": 3.97,
+      "eval_triggered": 144,
+      "diff_f1_vs_as": 5.776190476190476,
+      "ci_as_lo": 2.988452380952381,
+      "ci_as_hi": 8.731785714285714
+    },
+    {
+      "size": 5,
+      "n_groups": 1,
+      "formula": "as&cnf&gap&mrg&ovl",
+      "eval_f1": 62.329993154993154,
+      "eval_calls": 4.333333333333333,
+      "eval_triggered": 92,
+      "diff_f1_vs_as": 5.566666666666666,
+      "ci_as_lo": 2.58984126984127,
+      "ci_as_hi": 8.611428571428572
+    },
+    {
+      "size": 5,
+      "n_groups": 1,
+      "formula": "as&cnf&mrg&ovl&tzi",
+      "eval_f1": 62.329993154993154,
+      "eval_calls": 4.426666666666667,
+      "eval_triggered": 80,
+      "diff_f1_vs_as": 5.566666666666666,
+      "ci_as_lo": 2.58984126984127,
+      "ci_as_hi": 8.611428571428572
+    },
+    {
+      "size": 6,
+      "n_groups": 1,
+      "formula": "as&cnf&gap&mrg&ovl&tzi",
+      "eval_f1": 62.329993154993154,
+      "eval_calls": 4.43,
+      "eval_triggered": 79,
+      "diff_f1_vs_as": 5.566666666666666,
+      "ci_as_lo": 2.58984126984127,
+      "ci_as_hi": 8.611428571428572
+    },
+    {
+      "size": 4,
+      "n_groups": 1,
+      "formula": "cnf&gap&mrg&ovl",
+      "eval_f1": 62.22742905242904,
+      "eval_calls": 4.226666666666667,
+      "eval_triggered": 99,
+      "diff_f1_vs_as": 5.464102564102564,
+      "ci_as_lo": 2.486959706959707,
+      "ci_as_hi": 8.562896825396825
+    },
+    {
+      "size": 4,
+      "n_groups": 1,
+      "formula": "cnf&mrg&ovl&tzi",
+      "eval_f1": 62.22742905242904,
+      "eval_calls": 4.336666666666667,
+      "eval_triggered": 86,
+      "diff_f1_vs_as": 5.464102564102564,
+      "ci_as_lo": 2.486959706959707,
+      "ci_as_hi": 8.562896825396825
+    },
+    {
+      "size": 5,
+      "n_groups": 1,
+      "formula": "cnf&gap&mrg&ovl&tzi",
+      "eval_f1": 62.22742905242904,
+      "eval_calls": 4.34,
+      "eval_triggered": 85,
+      "diff_f1_vs_as": 5.464102564102564,
+      "ci_as_lo": 2.486959706959707,
+      "ci_as_hi": 8.562896825396825
+    },
+    {
+      "size": 3,
+      "n_groups": 1,
+      "formula": "cnf&mrg&ovl",
+      "eval_f1": 62.17028619528618,
+      "eval_calls": 3.756666666666667,
+      "eval_triggered": 158,
+      "diff_f1_vs_as": 5.406959706959706,
+      "ci_as_lo": 2.6444047619047617,
+      "ci_as_hi": 8.285912698412698
+    },
+    {
+      "size": 3,
+      "n_groups": 1,
+      "formula": "as&cnf&mrg",
+      "eval_f1": 62.13475505975505,
+      "eval_calls": 3.53,
+      "eval_triggered": 185,
+      "diff_f1_vs_as": 5.371428571428572,
+      "ci_as_lo": 2.8101190476190476,
+      "ci_as_hi": 8.004325396825394
+    },
+    {
+      "size": 4,
+      "n_groups": 1,
+      "formula": "as&gap&mrg&ovl",
+      "eval_f1": 62.10777093277093,
+      "eval_calls": 4.24,
+      "eval_triggered": 104,
+      "diff_f1_vs_as": 5.344444444444445,
+      "ci_as_lo": 2.3961111111111113,
+      "ci_as_hi": 8.444246031746031
+    }
+  ]
+}

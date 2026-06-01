@@ -1,0 +1,21 @@
+{
+  "n_qids": 50,
+  "n_rows": 250,
+  "em_rate": 0.572,
+  "correlations_pearson": {
+    "answer_token_margin": 0.38321178043256393,
+    "conf_top1_minus_top2": 0.35261264722116065,
+    "conf_top1_minus_2nd_digit": 0.35256583640731276,
+    "conf_chosen_prob": 0.3742462700252928,
+    "conf_entropy_digits": -0.38028336291319415,
+    "llm_confidence": 0.11705158262689032
+  },
+  "correlations_spearman": {
+    "answer_token_margin": 0.4018704663905001,
+    "conf_top1_minus_top2": 0.37173718263885003,
+    "conf_top1_minus_2nd_digit": 0.3718492022810495,
+    "conf_chosen_prob": 0.37823432188641776,
+    "conf_entropy_digits": -0.3785703808130161,
+    "llm_confidence": 0.18126089853109004
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "name": "stable_only",
+  "rule": "answer_stable == 1",
+  "tune": {
+    "f1": 72.46,
+    "em": 60.0,
+    "avg_calls": 2.4,
+    "n": 100
+  },
+  "eval": {
+    "f1": 67.094,
+    "em": 55.667,
+    "avg_calls": 2.5,
+    "n": 300
+  },
+  "bootstrap_vs_fixed_k": {
+    "k=2": {
+      "ours_f1": 67.094,
+      "base_f1": 63.015,
+      "diff_f1": 4.079,
+      "diff_f1_ci95": [
+        1.881,
+        6.491
+      ],
+      "diff_em": 2.667,
+      "diff_em_ci95": [
+        0.667,
+        5.0
+      ],
+      "diff_calls": 0.5,
+      "diff_calls_ci95": [
+        0.42,
+        0.58
+      ],
+      "p_ours_worse_f1": 0.0
+    },
+    "k=3": {
+      "ours_f1": 67.094,
+      "base_f1": 65.45,
+      "diff_f1": 1.644,
+      "diff_f1_ci95": [
+        0.433,
+        3.256
+      ],
+      "diff_em": 1.0,
+      "diff_em_ci95": [
+        -0.333,
+        2.667
+      ],
+      "diff_calls": -0.5,
+      "diff_calls_ci95": [
+        -0.58,
+        -0.42
+      ],
+      "p_ours_worse_f1": 0.002
+    },
+    "k=5": {
+      "ours_f1": 67.094,
+      "base_f1": 69.419,
+      "diff_f1": -2.325,
+      "diff_f1_ci95": [
+        -4.6,
+        -0.225
+      ],
+      "diff_em": -2.0,
+      "diff_em_ci95": [
+        -4.667,
+        0.667
+      ],
+      "diff_calls": -2.5,
+      "diff_calls_ci95": [
+        -2.58,
+        -2.42
+      ],
+      "p_ours_worse_f1": 0.984
+    }
+  }
+}

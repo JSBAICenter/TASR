@@ -1,0 +1,165 @@
+{
+  "signals": [
+    "calibrated_logit_margin",
+    "answer_stable",
+    "calibrated_conf",
+    "overlap_signal",
+    "top_score_z_intra",
+    "gap"
+  ],
+  "budget_max_avg_calls": 3.0,
+  "locked_thresholds": {
+    "calibrated_logit_margin": {
+      "threshold": 0.3076923076923077,
+      "tune_f1": 66.843837535014,
+      "tune_calls": 2.62
+    },
+    "answer_stable": {
+      "threshold": 1.0,
+      "tune_f1": 58.388095238095225,
+      "tune_calls": 2.51
+    },
+    "calibrated_conf": {
+      "threshold": 0.31086439333862015,
+      "tune_f1": 54.9595238095238,
+      "tune_calls": 2.06
+    },
+    "overlap_signal": {
+      "threshold": 0.12259615384615385,
+      "tune_f1": 64.643837535014,
+      "tune_calls": 2.96
+    },
+    "top_score_z_intra": {
+      "threshold": 2.15931462127031,
+      "tune_f1": 55.930952380952384,
+      "tune_calls": 3.0
+    },
+    "gap": {
+      "threshold": 0.9814065418753312,
+      "tune_f1": 52.359523809523814,
+      "tune_calls": 2.72
+    }
+  },
+  "baselines": {
+    "fixed_k3_f1": 53.281734006734006,
+    "answer_stable_f1": 51.50951178451179,
+    "answer_stable_calls": 2.49,
+    "family_a_f1": 59.361694324194325
+  },
+  "n_formulas": 876,
+  "n_winners_vs_answer_stable": 197,
+  "n_winners_no_answer_stable": 51,
+  "n_winners_with_margin": 160,
+  "top_10_by_f1": [
+    {
+      "size": 4,
+      "n_groups": 1,
+      "formula": "as&gap&mrg&ovl",
+      "eval_f1": 62.16010702260702,
+      "eval_calls": 4.3966666666666665,
+      "eval_triggered": 94,
+      "diff_f1_vs_as": 10.650595238095239,
+      "ci_as_lo": 7.237212301587302,
+      "ci_as_hi": 14.215605158730158
+    },
+    {
+      "size": 5,
+      "n_groups": 1,
+      "formula": "as&cnf&gap&mrg&ovl",
+      "eval_f1": 62.16010702260702,
+      "eval_calls": 4.3966666666666665,
+      "eval_triggered": 94,
+      "diff_f1_vs_as": 10.650595238095239,
+      "ci_as_lo": 7.237212301587302,
+      "ci_as_hi": 14.215605158730158
+    },
+    {
+      "size": 4,
+      "n_groups": 1,
+      "formula": "as&mrg&ovl&tzi",
+      "eval_f1": 62.16010702260702,
+      "eval_calls": 4.476666666666667,
+      "eval_triggered": 82,
+      "diff_f1_vs_as": 10.650595238095239,
+      "ci_as_lo": 7.237212301587302,
+      "ci_as_hi": 14.215605158730158
+    },
+    {
+      "size": 5,
+      "n_groups": 1,
+      "formula": "as&cnf&mrg&ovl&tzi",
+      "eval_f1": 62.16010702260702,
+      "eval_calls": 4.476666666666667,
+      "eval_triggered": 82,
+      "diff_f1_vs_as": 10.650595238095239,
+      "ci_as_lo": 7.237212301587302,
+      "ci_as_hi": 14.215605158730158
+    },
+    {
+      "size": 5,
+      "n_groups": 1,
+      "formula": "as&gap&mrg&ovl&tzi",
+      "eval_f1": 62.16010702260702,
+      "eval_calls": 4.483333333333333,
+      "eval_triggered": 80,
+      "diff_f1_vs_as": 10.650595238095239,
+      "ci_as_lo": 7.237212301587302,
+      "ci_as_hi": 14.215605158730158
+    },
+    {
+      "size": 6,
+      "n_groups": 1,
+      "formula": "as&cnf&gap&mrg&ovl&tzi",
+      "eval_f1": 62.16010702260702,
+      "eval_calls": 4.483333333333333,
+      "eval_triggered": 80,
+      "diff_f1_vs_as": 10.650595238095239,
+      "ci_as_lo": 7.237212301587302,
+      "ci_as_hi": 14.215605158730158
+    },
+    {
+      "size": 3,
+      "n_groups": 1,
+      "formula": "as&mrg&ovl",
+      "eval_f1": 62.10455146705146,
+      "eval_calls": 4.1066666666666665,
+      "eval_triggered": 141,
+      "diff_f1_vs_as": 10.595039682539682,
+      "ci_as_lo": 7.182539682539682,
+      "ci_as_hi": 14.154037698412699
+    },
+    {
+      "size": 4,
+      "n_groups": 1,
+      "formula": "as&cnf&mrg&ovl",
+      "eval_f1": 62.10455146705146,
+      "eval_calls": 4.1066666666666665,
+      "eval_triggered": 141,
+      "diff_f1_vs_as": 10.595039682539682,
+      "ci_as_lo": 7.182539682539682,
+      "ci_as_hi": 14.154037698412699
+    },
+    {
+      "size": 2,
+      "n_groups": 1,
+      "formula": "mrg&ovl",
+      "eval_f1": 61.97121813371814,
+      "eval_calls": 3.8733333333333335,
+      "eval_triggered": 158,
+      "diff_f1_vs_as": 10.461706349206349,
+      "ci_as_lo": 7.110625,
+      "ci_as_hi": 14.046264880952384
+    },
+    {
+      "size": 3,
+      "n_groups": 1,
+      "formula": "cnf&mrg&ovl",
+      "eval_f1": 61.97121813371814,
+      "eval_calls": 3.8733333333333335,
+      "eval_triggered": 158,
+      "diff_f1_vs_as": 10.461706349206349,
+      "ci_as_lo": 7.110625,
+      "ci_as_hi": 14.046264880952384
+    }
+  ]
+}

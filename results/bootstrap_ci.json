@@ -1,0 +1,128 @@
+{
+  "rule": "stop if answer_stable == 1",
+  "rule_form": "single binary signal: 1 iff normalized current_answer equals previous round's normalized answer for the same qid",
+  "n_questions": 300,
+  "n_boot": 1000,
+  "seed": 42,
+  "ours_em_mean": 55.667,
+  "ours_f1_mean": 67.094,
+  "ours_avg_calls": 2.5,
+  "comparisons": {
+    "fixed_k=1": {
+      "ours_f1_mean": 67.094,
+      "ours_f1_ci95": [
+        62.27,
+        72.011
+      ],
+      "base_f1_mean": 49.857,
+      "base_f1_ci95": [
+        44.73,
+        55.137
+      ],
+      "diff_f1_mean": 17.238,
+      "diff_f1_ci95": [
+        13.285,
+        21.177
+      ],
+      "diff_em_mean": 14.333,
+      "diff_em_ci95": [
+        10.333,
+        18.667
+      ],
+      "diff_calls_mean": 1.5,
+      "diff_calls_ci95": [
+        1.42,
+        1.58
+      ],
+      "p_ours_worse_f1": 0.0,
+      "p_ours_better_f1": 1.0
+    },
+    "fixed_k=2": {
+      "ours_f1_mean": 67.094,
+      "ours_f1_ci95": [
+        62.27,
+        72.011
+      ],
+      "base_f1_mean": 63.015,
+      "base_f1_ci95": [
+        58.397,
+        68.225
+      ],
+      "diff_f1_mean": 4.079,
+      "diff_f1_ci95": [
+        1.881,
+        6.491
+      ],
+      "diff_em_mean": 2.667,
+      "diff_em_ci95": [
+        0.667,
+        5.0
+      ],
+      "diff_calls_mean": 0.5,
+      "diff_calls_ci95": [
+        0.42,
+        0.58
+      ],
+      "p_ours_worse_f1": 0.0,
+      "p_ours_better_f1": 1.0
+    },
+    "fixed_k=3": {
+      "ours_f1_mean": 67.094,
+      "ours_f1_ci95": [
+        62.27,
+        72.011
+      ],
+      "base_f1_mean": 65.45,
+      "base_f1_ci95": [
+        60.484,
+        70.324
+      ],
+      "diff_f1_mean": 1.644,
+      "diff_f1_ci95": [
+        0.433,
+        3.256
+      ],
+      "diff_em_mean": 1.0,
+      "diff_em_ci95": [
+        -0.333,
+        2.667
+      ],
+      "diff_calls_mean": -0.5,
+      "diff_calls_ci95": [
+        -0.58,
+        -0.42
+      ],
+      "p_ours_worse_f1": 0.002,
+      "p_ours_better_f1": 0.998
+    },
+    "fixed_k=5": {
+      "ours_f1_mean": 67.094,
+      "ours_f1_ci95": [
+        62.27,
+        72.011
+      ],
+      "base_f1_mean": 69.419,
+      "base_f1_ci95": [
+        64.835,
+        74.039
+      ],
+      "diff_f1_mean": -2.325,
+      "diff_f1_ci95": [
+        -4.6,
+        -0.225
+      ],
+      "diff_em_mean": -2.0,
+      "diff_em_ci95": [
+        -4.667,
+        0.667
+      ],
+      "diff_calls_mean": -2.5,
+      "diff_calls_ci95": [
+        -2.58,
+        -2.42
+      ],
+      "p_ours_worse_f1": 0.984,
+      "p_ours_better_f1": 0.016
+    }
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "signals": [
+    "calibrated_logit_margin",
+    "answer_stable",
+    "calibrated_conf",
+    "overlap_signal",
+    "top_score_z_intra",
+    "gap"
+  ],
+  "budget_max_avg_calls": 3.0,
+  "locked_thresholds": {
+    "calibrated_logit_margin": {
+      "threshold": 0.4358974358974359,
+      "tune_f1": 71.9716959511077,
+      "tune_calls": 2.45
+    },
+    "answer_stable": {
+      "threshold": 1.0,
+      "tune_f1": 72.45979118920295,
+      "tune_calls": 2.42
+    },
+    "calibrated_conf": {
+      "threshold": 0.4475524475524476,
+      "tune_f1": 67.51861471861471,
+      "tune_calls": 2.02
+    },
+    "overlap_signal": {
+      "threshold": 0.12259615384615385,
+      "tune_f1": 72.45979118920295,
+      "tune_calls": 2.96
+    },
+    "top_score_z_intra": {
+      "threshold": 2.1176373756661606,
+      "tune_f1": 64.68836261777439,
+      "tune_calls": 2.84
+    },
+    "gap": {
+      "threshold": 0.9814065418753312,
+      "tune_f1": 63.93836261777439,
+      "tune_calls": 2.72
+    }
+  },
+  "baselines": {
+    "fixed_k3_f1": 65.18777796277796,
+    "answer_stable_f1": 68.0385716135716,
+    "answer_stable_calls": 2.5366666666666666,
+    "family_a_f1": 66.80871813371813
+  },
+  "n_formulas": 876,
+  "n_winners_vs_answer_stable": 6,
+  "n_winners_no_answer_stable": 0,
+  "n_winners_with_margin": 0,
+  "top_10_by_f1": [
+    {
+      "size": 5,
+      "n_groups": 1,
+      "formula": "as&cnf&gap&mrg&ovl",
+      "eval_f1": 69.35792448292449,
+      "eval_calls": 4.273333333333333,
+      "eval_triggered": 118,
+      "diff_f1_vs_as": 1.3193528693528693,
+      "ci_as_lo": -0.33723443223443217,
+      "ci_as_hi": 3.085873015873016
+    },
+    {
+      "size": 5,
+      "n_groups": 1,
+      "formula": "as&cnf&mrg&ovl&tzi",
+      "eval_f1": 69.35792448292449,
+      "eval_calls": 4.323333333333333,
+      "eval_triggered": 107,
+      "diff_f1_vs_as": 1.3193528693528693,
+      "ci_as_lo": -0.33723443223443217,
+      "ci_as_hi": 3.085873015873016
+    },
+    {
+      "size": 6,
+      "n_groups": 1,
+      "formula": "as&cnf&gap&mrg&ovl&tzi",
+      "eval_f1": 69.35792448292449,
+      "eval_calls": 4.3566666666666665,
+      "eval_triggered": 103,
+      "diff_f1_vs_as": 1.3193528693528693,
+      "ci_as_lo": -0.33723443223443217,
+      "ci_as_hi": 3.085873015873016
+    },
+    {
+      "size": 4,
+      "n_groups": 1,
+      "formula": "as&gap&mrg&ovl",
+      "eval_f1": 69.30236892736893,
+      "eval_calls": 4.266666666666667,
+      "eval_triggered": 119,
+      "diff_f1_vs_as": 1.2637973137973137,
+      "ci_as_lo": -0.35303571428571434,
+      "ci_as_hi": 3.020102258852259
+    },
+    {
+      "size": 4,
+      "n_groups": 1,
+      "formula": "as&mrg&ovl&tzi",
+      "eval_f1": 69.30236892736893,
+      "eval_calls": 4.316666666666666,
+      "eval_triggered": 108,
+      "diff_f1_vs_as": 1.2637973137973137,
+      "ci_as_lo": -0.35303571428571434,
+      "ci_as_hi": 3.020102258852259
+    },
+    {
+      "size": 5,
+      "n_groups": 1,
+      "formula": "as&gap&mrg&ovl&tzi",
+      "eval_f1": 69.30236892736893,
+      "eval_calls": 4.35,
+      "eval_triggered": 104,
+      "diff_f1_vs_as": 1.2637973137973137,
+      "ci_as_lo": -0.35303571428571434,
+      "ci_as_hi": 3.020102258852259
+    },
+    {
+      "size": 4,
+      "n_groups": 1,
+      "formula": "as&cnf&gap&ovl",
+      "eval_f1": 69.13570226070226,
+      "eval_calls": 4.05,
+      "eval_triggered": 137,
+      "diff_f1_vs_as": 1.0971306471306472,
+      "ci_as_lo": -0.4287301587301587,
+      "ci_as_hi": 2.758075396825397
+    },
+    {
+      "size": 4,
+      "n_groups": 1,
+      "formula": "as&cnf&ovl&tzi",
+      "eval_f1": 69.13570226070226,
+      "eval_calls": 4.126666666666667,
+      "eval_triggered": 123,
+      "diff_f1_vs_as": 1.0971306471306472,
+      "ci_as_lo": -0.4287301587301587,
+      "ci_as_hi": 2.758075396825397
+    },
+    {
+      "size": 5,
+      "n_groups": 1,
+      "formula": "as&cnf&gap&ovl&tzi",
+      "eval_f1": 69.13570226070226,
+      "eval_calls": 4.17,
+      "eval_triggered": 118,
+      "diff_f1_vs_as": 1.0971306471306472,
+      "ci_as_lo": -0.4287301587301587,
+      "ci_as_hi": 2.758075396825397
+    },
+    {
+      "size": 4,
+      "n_groups": 1,
+      "formula": "as&cnf&mrg&ovl",
+      "eval_f1": 69.11982924482925,
+      "eval_calls": 3.8933333333333335,
+      "eval_triggered": 178,
+      "diff_f1_vs_as": 1.0812576312576312,
+      "ci_as_lo": -0.5333699633699635,
+      "ci_as_hi": 2.765979853479853
+    }
+  ]
+}

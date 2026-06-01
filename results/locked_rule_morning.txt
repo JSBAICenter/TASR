@@ -1,0 +1,20 @@
+{
+  "t_conf": 0.58,
+  "t_overlap": 0.125,
+  "rule": "stop if calibrated_conf > 0.5800 OR overlap_signal > 0.1250",
+  "tune": {
+    "em": 61.0,
+    "f1": 73.85979118920295,
+    "avg_calls": 2.55,
+    "n_stopped_early": 100,
+    "n_questions": 100
+  },
+  "budget_max_avg_calls": 3.0,
+  "eval": {
+    "em": 54.333333333333336,
+    "f1": 64.74284511784512,
+    "avg_calls": 2.566666666666667,
+    "n_questions": 300,
+    "n_stopped_early": 300
+  }
+}

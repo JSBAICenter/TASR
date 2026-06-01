@@ -1,0 +1,78 @@
+{
+  "name": "judge_4ge",
+  "rule": "judge_entailment >= 4",
+  "tune": {
+    "f1": 67.652,
+    "em": 56.0,
+    "avg_calls": 2.15,
+    "n": 100
+  },
+  "eval": {
+    "f1": 61.836,
+    "em": 52.0,
+    "avg_calls": 2.423,
+    "n": 300
+  },
+  "bootstrap_vs_fixed_k": {
+    "k=2": {
+      "ours_f1": 61.836,
+      "base_f1": 63.015,
+      "diff_f1": -1.178,
+      "diff_f1_ci95": [
+        -4.757,
+        2.344
+      ],
+      "diff_em": -1.0,
+      "diff_em_ci95": [
+        -4.333,
+        2.667
+      ],
+      "diff_calls": 0.423,
+      "diff_calls_ci95": [
+        0.237,
+        0.597
+      ],
+      "p_ours_worse_f1": 0.773
+    },
+    "k=3": {
+      "ours_f1": 61.836,
+      "base_f1": 65.45,
+      "diff_f1": -3.613,
+      "diff_f1_ci95": [
+        -7.062,
+        -0.186
+      ],
+      "diff_em": -2.667,
+      "diff_em_ci95": [
+        -6.333,
+        1.0
+      ],
+      "diff_calls": -0.577,
+      "diff_calls_ci95": [
+        -0.763,
+        -0.403
+      ],
+      "p_ours_worse_f1": 0.981
+    },
+    "k=5": {
+      "ours_f1": 61.836,
+      "base_f1": 69.419,
+      "diff_f1": -7.583,
+      "diff_f1_ci95": [
+        -10.794,
+        -4.478
+      ],
+      "diff_em": -5.667,
+      "diff_em_ci95": [
+        -9.333,
+        -2.333
+      ],
+      "diff_calls": -2.577,
+      "diff_calls_ci95": [
+        -2.763,
+        -2.403
+      ],
+      "p_ours_worse_f1": 1.0
+    }
+  }
+}

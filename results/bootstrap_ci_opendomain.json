@@ -1,0 +1,497 @@
+{
+  "devstral_fullwiki": {
+    "n_questions": 300,
+    "AS_m25_f1": 50.81,
+    "AS_m25_calls": 2.717,
+    "vs_baselines": {
+      "fixed_k=1": {
+        "ours_f1": 50.81,
+        "base_f1": 44.32,
+        "diff_f1_mean": 6.49,
+        "diff_f1_ci95": [
+          3.453,
+          9.949
+        ],
+        "diff_calls_mean": 1.717,
+        "diff_calls_ci95": [
+          1.603,
+          1.837
+        ],
+        "p_ours_worse_f1": 0.0,
+        "verdict": "SIGNIFICANT WIN"
+      },
+      "fixed_k=3": {
+        "ours_f1": 50.81,
+        "base_f1": 51.18,
+        "diff_f1_mean": -0.38,
+        "diff_f1_ci95": [
+          -2.308,
+          1.336
+        ],
+        "diff_calls_mean": -0.283,
+        "diff_calls_ci95": [
+          -0.397,
+          -0.163
+        ],
+        "p_ours_worse_f1": 0.687,
+        "verdict": "NOT SIGNIFICANT"
+      },
+      "fixed_k=5": {
+        "ours_f1": 50.81,
+        "base_f1": 52.54,
+        "diff_f1_mean": -1.73,
+        "diff_f1_ci95": [
+          -4.214,
+          0.396
+        ],
+        "diff_calls_mean": -2.283,
+        "diff_calls_ci95": [
+          -2.397,
+          -2.163
+        ],
+        "p_ours_worse_f1": 0.955,
+        "verdict": "NOT SIGNIFICANT"
+      }
+    }
+  },
+  "devstral_nq": {
+    "n_questions": 300,
+    "AS_m25_f1": 49.61,
+    "AS_m25_calls": 2.757,
+    "vs_baselines": {
+      "fixed_k=1": {
+        "ours_f1": 49.61,
+        "base_f1": 42.61,
+        "diff_f1_mean": 7.0,
+        "diff_f1_ci95": [
+          3.828,
+          10.256
+        ],
+        "diff_calls_mean": 1.757,
+        "diff_calls_ci95": [
+          1.643,
+          1.87
+        ],
+        "p_ours_worse_f1": 0.0,
+        "verdict": "SIGNIFICANT WIN"
+      },
+      "fixed_k=3": {
+        "ours_f1": 49.61,
+        "base_f1": 50.43,
+        "diff_f1_mean": -0.81,
+        "diff_f1_ci95": [
+          -2.394,
+          0.774
+        ],
+        "diff_calls_mean": -0.243,
+        "diff_calls_ci95": [
+          -0.357,
+          -0.13
+        ],
+        "p_ours_worse_f1": 0.842,
+        "verdict": "NOT SIGNIFICANT"
+      },
+      "fixed_k=5": {
+        "ours_f1": 49.61,
+        "base_f1": 50.3,
+        "diff_f1_mean": -0.68,
+        "diff_f1_ci95": [
+          -2.535,
+          1.173
+        ],
+        "diff_calls_mean": -2.243,
+        "diff_calls_ci95": [
+          -2.357,
+          -2.13
+        ],
+        "p_ours_worse_f1": 0.763,
+        "verdict": "NOT SIGNIFICANT"
+      }
+    }
+  },
+  "devstral_trivia": {
+    "n_questions": 300,
+    "AS_m25_f1": 76.94,
+    "AS_m25_calls": 2.68,
+    "vs_baselines": {
+      "fixed_k=1": {
+        "ours_f1": 76.94,
+        "base_f1": 71.4,
+        "diff_f1_mean": 5.54,
+        "diff_f1_ci95": [
+          2.556,
+          8.433
+        ],
+        "diff_calls_mean": 1.68,
+        "diff_calls_ci95": [
+          1.577,
+          1.787
+        ],
+        "p_ours_worse_f1": 0.0,
+        "verdict": "SIGNIFICANT WIN"
+      },
+      "fixed_k=3": {
+        "ours_f1": 76.94,
+        "base_f1": 76.11,
+        "diff_f1_mean": 0.84,
+        "diff_f1_ci95": [
+          -0.626,
+          2.441
+        ],
+        "diff_calls_mean": -0.32,
+        "diff_calls_ci95": [
+          -0.423,
+          -0.213
+        ],
+        "p_ours_worse_f1": 0.126,
+        "verdict": "NOT SIGNIFICANT"
+      },
+      "fixed_k=5": {
+        "ours_f1": 76.94,
+        "base_f1": 76.89,
+        "diff_f1_mean": 0.06,
+        "diff_f1_ci95": [
+          -1.187,
+          1.275
+        ],
+        "diff_calls_mean": -2.32,
+        "diff_calls_ci95": [
+          -2.423,
+          -2.213
+        ],
+        "p_ours_worse_f1": 0.514,
+        "verdict": "NOT SIGNIFICANT"
+      }
+    }
+  },
+  "gemma_fullwiki": {
+    "n_questions": 300,
+    "AS_m25_f1": 43.84,
+    "AS_m25_calls": 3.617,
+    "vs_baselines": {
+      "fixed_k=1": {
+        "ours_f1": 43.84,
+        "base_f1": 33.83,
+        "diff_f1_mean": 10.01,
+        "diff_f1_ci95": [
+          6.187,
+          14.324
+        ],
+        "diff_calls_mean": 2.617,
+        "diff_calls_ci95": [
+          2.473,
+          2.753
+        ],
+        "p_ours_worse_f1": 0.0,
+        "verdict": "SIGNIFICANT WIN"
+      },
+      "fixed_k=3": {
+        "ours_f1": 43.84,
+        "base_f1": 41.69,
+        "diff_f1_mean": 2.15,
+        "diff_f1_ci95": [
+          -0.268,
+          4.5
+        ],
+        "diff_calls_mean": 0.617,
+        "diff_calls_ci95": [
+          0.473,
+          0.753
+        ],
+        "p_ours_worse_f1": 0.043,
+        "verdict": "NOT SIGNIFICANT"
+      },
+      "fixed_k=5": {
+        "ours_f1": 43.84,
+        "base_f1": 44.63,
+        "diff_f1_mean": -0.79,
+        "diff_f1_ci95": [
+          -2.22,
+          0.5
+        ],
+        "diff_calls_mean": -1.383,
+        "diff_calls_ci95": [
+          -1.527,
+          -1.247
+        ],
+        "p_ours_worse_f1": 0.89,
+        "verdict": "NOT SIGNIFICANT"
+      }
+    }
+  },
+  "gemma_nq": {
+    "n_questions": 300,
+    "AS_m25_f1": 43.02,
+    "AS_m25_calls": 3.783,
+    "vs_baselines": {
+      "fixed_k=1": {
+        "ours_f1": 43.02,
+        "base_f1": 26.7,
+        "diff_f1_mean": 16.32,
+        "diff_f1_ci95": [
+          12.591,
+          20.58
+        ],
+        "diff_calls_mean": 2.783,
+        "diff_calls_ci95": [
+          2.637,
+          2.927
+        ],
+        "p_ours_worse_f1": 0.0,
+        "verdict": "SIGNIFICANT WIN"
+      },
+      "fixed_k=3": {
+        "ours_f1": 43.02,
+        "base_f1": 40.04,
+        "diff_f1_mean": 2.98,
+        "diff_f1_ci95": [
+          0.916,
+          5.294
+        ],
+        "diff_calls_mean": 0.783,
+        "diff_calls_ci95": [
+          0.637,
+          0.927
+        ],
+        "p_ours_worse_f1": 0.003,
+        "verdict": "SIGNIFICANT WIN"
+      },
+      "fixed_k=5": {
+        "ours_f1": 43.02,
+        "base_f1": 42.85,
+        "diff_f1_mean": 0.17,
+        "diff_f1_ci95": [
+          -1.163,
+          1.579
+        ],
+        "diff_calls_mean": -1.217,
+        "diff_calls_ci95": [
+          -1.363,
+          -1.073
+        ],
+        "p_ours_worse_f1": 0.375,
+        "verdict": "NOT SIGNIFICANT"
+      }
+    }
+  },
+  "gemma_trivia": {
+    "n_questions": 300,
+    "AS_m25_f1": 59.13,
+    "AS_m25_calls": 3.207,
+    "vs_baselines": {
+      "fixed_k=1": {
+        "ours_f1": 59.13,
+        "base_f1": 46.08,
+        "diff_f1_mean": 13.05,
+        "diff_f1_ci95": [
+          9.399,
+          16.734
+        ],
+        "diff_calls_mean": 2.207,
+        "diff_calls_ci95": [
+          2.053,
+          2.367
+        ],
+        "p_ours_worse_f1": 0.0,
+        "verdict": "SIGNIFICANT WIN"
+      },
+      "fixed_k=3": {
+        "ours_f1": 59.13,
+        "base_f1": 59.18,
+        "diff_f1_mean": -0.06,
+        "diff_f1_ci95": [
+          -2.108,
+          2.115
+        ],
+        "diff_calls_mean": 0.207,
+        "diff_calls_ci95": [
+          0.053,
+          0.367
+        ],
+        "p_ours_worse_f1": 0.501,
+        "verdict": "NOT SIGNIFICANT"
+      },
+      "fixed_k=5": {
+        "ours_f1": 59.13,
+        "base_f1": 61.96,
+        "diff_f1_mean": -2.83,
+        "diff_f1_ci95": [
+          -5.565,
+          -0.268
+        ],
+        "diff_calls_mean": -1.793,
+        "diff_calls_ci95": [
+          -1.947,
+          -1.633
+        ],
+        "p_ours_worse_f1": 0.988,
+        "verdict": "SIGNIFICANT LOSS"
+      }
+    }
+  },
+  "qwen_fullwiki": {
+    "n_questions": 300,
+    "AS_m25_f1": 53.83,
+    "AS_m25_calls": 2.68,
+    "vs_baselines": {
+      "fixed_k=1": {
+        "ours_f1": 53.83,
+        "base_f1": 49.53,
+        "diff_f1_mean": 4.31,
+        "diff_f1_ci95": [
+          1.511,
+          7.12
+        ],
+        "diff_calls_mean": 1.68,
+        "diff_calls_ci95": [
+          1.563,
+          1.803
+        ],
+        "p_ours_worse_f1": 0.0,
+        "verdict": "SIGNIFICANT WIN"
+      },
+      "fixed_k=3": {
+        "ours_f1": 53.83,
+        "base_f1": 53.78,
+        "diff_f1_mean": 0.05,
+        "diff_f1_ci95": [
+          -2.28,
+          1.951
+        ],
+        "diff_calls_mean": -0.32,
+        "diff_calls_ci95": [
+          -0.437,
+          -0.197
+        ],
+        "p_ours_worse_f1": 0.479,
+        "verdict": "NOT SIGNIFICANT"
+      },
+      "fixed_k=5": {
+        "ours_f1": 53.83,
+        "base_f1": 55.16,
+        "diff_f1_mean": -1.33,
+        "diff_f1_ci95": [
+          -3.319,
+          0.447
+        ],
+        "diff_calls_mean": -2.32,
+        "diff_calls_ci95": [
+          -2.437,
+          -2.197
+        ],
+        "p_ours_worse_f1": 0.924,
+        "verdict": "NOT SIGNIFICANT"
+      }
+    }
+  },
+  "qwen_nq": {
+    "n_questions": 300,
+    "AS_m25_f1": 46.2,
+    "AS_m25_calls": 2.847,
+    "vs_baselines": {
+      "fixed_k=1": {
+        "ours_f1": 46.2,
+        "base_f1": 33.88,
+        "diff_f1_mean": 12.32,
+        "diff_f1_ci95": [
+          8.689,
+          16.354
+        ],
+        "diff_calls_mean": 1.847,
+        "diff_calls_ci95": [
+          1.733,
+          1.97
+        ],
+        "p_ours_worse_f1": 0.0,
+        "verdict": "SIGNIFICANT WIN"
+      },
+      "fixed_k=3": {
+        "ours_f1": 46.2,
+        "base_f1": 45.15,
+        "diff_f1_mean": 1.05,
+        "diff_f1_ci95": [
+          -1.251,
+          3.341
+        ],
+        "diff_calls_mean": -0.153,
+        "diff_calls_ci95": [
+          -0.267,
+          -0.03
+        ],
+        "p_ours_worse_f1": 0.188,
+        "verdict": "NOT SIGNIFICANT"
+      },
+      "fixed_k=5": {
+        "ours_f1": 46.2,
+        "base_f1": 48.46,
+        "diff_f1_mean": -2.25,
+        "diff_f1_ci95": [
+          -4.657,
+          -0.061
+        ],
+        "diff_calls_mean": -2.153,
+        "diff_calls_ci95": [
+          -2.267,
+          -2.03
+        ],
+        "p_ours_worse_f1": 0.976,
+        "verdict": "SIGNIFICANT LOSS"
+      }
+    }
+  },
+  "qwen_trivia": {
+    "n_questions": 300,
+    "AS_m25_f1": 71.72,
+    "AS_m25_calls": 2.533,
+    "vs_baselines": {
+      "fixed_k=1": {
+        "ours_f1": 71.72,
+        "base_f1": 63.21,
+        "diff_f1_mean": 8.51,
+        "diff_f1_ci95": [
+          4.872,
+          12.056
+        ],
+        "diff_calls_mean": 1.533,
+        "diff_calls_ci95": [
+          1.433,
+          1.65
+        ],
+        "p_ours_worse_f1": 0.0,
+        "verdict": "SIGNIFICANT WIN"
+      },
+      "fixed_k=3": {
+        "ours_f1": 71.72,
+        "base_f1": 71.42,
+        "diff_f1_mean": 0.3,
+        "diff_f1_ci95": [
+          -1.632,
+          2.067
+        ],
+        "diff_calls_mean": -0.467,
+        "diff_calls_ci95": [
+          -0.567,
+          -0.35
+        ],
+        "p_ours_worse_f1": 0.391,
+        "verdict": "NOT SIGNIFICANT"
+      },
+      "fixed_k=5": {
+        "ours_f1": 71.72,
+        "base_f1": 71.65,
+        "diff_f1_mean": 0.07,
+        "diff_f1_ci95": [
+          -1.594,
+          1.787
+        ],
+        "diff_calls_mean": -2.467,
+        "diff_calls_ci95": [
+          -2.567,
+          -2.35
+        ],
+        "p_ours_worse_f1": 0.461,
+        "verdict": "NOT SIGNIFICANT"
+      }
+    }
+  }
+}
